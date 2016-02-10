@@ -9,6 +9,185 @@ Souk is the Soukdesigner API allowing customers to integrate their soukdesigner 
 
 Get your API key for the authentication header token `X-Souk-Token` from your Soukdesigner Admin Panel.
 
+# Group Taxonomies and Taxons
+
+# /api/taxons
+
+### List All Taxons [GET]
+
++ Request (application/json)
+
+    + Headers
+    
+            X-Souk-Token: <your-api-key-from-souk-admin-panel>
+
++ Response 200 (application/json)
+
+    + Body
+              {
+                 "count":8,
+                 "total_count":8,
+                 "current_page":1,
+                 "per_page":25,
+                 "pages":1,
+                 "taxons":[
+                    {
+                       "taxons":[
+                          {
+                             "taxons":[
+              
+                             ],
+                             "id":3,
+                             "name":"Watches",
+                             "pretty_name":"Categories -\u003e Watches",
+                             "permalink":"categories/watches",
+                             "parent_id":1,
+                             "taxonomy_id":1
+                          },
+                          {
+                             "taxons":[
+              
+                             ],
+                             "id":4,
+                             "name":"Toys",
+                             "pretty_name":"Categories -\u003e Toys",
+                             "permalink":"categories/toys",
+                             "parent_id":1,
+                             "taxonomy_id":1
+                          },
+                          {
+                             "taxons":[
+              
+                             ],
+                             "id":5,
+                             "name":"Perfumes",
+                             "pretty_name":"Categories -\u003e Perfumes",
+                             "permalink":"categories/perfumes",
+                             "parent_id":1,
+                             "taxonomy_id":1
+                          }
+                       ],
+                       "id":1,
+                       "name":"Categories",
+                       "pretty_name":"Categories",
+                       "permalink":"categories",
+                       "parent_id":null,
+                       "taxonomy_id":1
+                    },
+                    {
+                       "taxons":[
+              
+                       ],
+                       "id":3,
+                       "name":"Watches",
+                       "pretty_name":"Categories -\u003e Watches",
+                       "permalink":"categories/watches",
+                       "parent_id":1,
+                       "taxonomy_id":1
+                    },
+                    {
+                       "taxons":[
+              
+                       ],
+                       "id":4,
+                       "name":"Toys",
+                       "pretty_name":"Categories -\u003e Toys",
+                       "permalink":"categories/toys",
+                       "parent_id":1,
+                       "taxonomy_id":1
+                    },
+                    {
+                       "taxons":[
+              
+                       ],
+                       "id":5,
+                       "name":"Perfumes",
+                       "pretty_name":"Categories -\u003e Perfumes",
+                       "permalink":"categories/perfumes",
+                       "parent_id":1,
+                       "taxonomy_id":1
+                    },
+                    {
+                       "taxons":[
+                          {
+                             "taxons":[
+              
+                             ],
+                             "id":6,
+                             "name":"Happy Kids",
+                             "pretty_name":"Brand -\u003e Happy Kids",
+                             "permalink":"brand/happy-kids",
+                             "parent_id":2,
+                             "taxonomy_id":2
+                          },
+                          {
+                             "taxons":[
+              
+                             ],
+                             "id":7,
+                             "name":"Prism Hour",
+                             "pretty_name":"Brand -\u003e Prism Hour",
+                             "permalink":"brand/prism-hour",
+                             "parent_id":2,
+                             "taxonomy_id":2
+                          },
+                          {
+                             "taxons":[
+              
+                             ],
+                             "id":8,
+                             "name":"Smells like",
+                             "pretty_name":"Brand -\u003e Smells like",
+                             "permalink":"brand/smells-like",
+                             "parent_id":2,
+                             "taxonomy_id":2
+                          }
+                       ],
+                       "id":2,
+                       "name":"Brand",
+                       "pretty_name":"Brand",
+                       "permalink":"brand",
+                       "parent_id":null,
+                       "taxonomy_id":2
+                    },
+                    {
+                       "taxons":[
+              
+                       ],
+                       "id":6,
+                       "name":"Happy Kids",
+                       "pretty_name":"Brand -\u003e Happy Kids",
+                       "permalink":"brand/happy-kids",
+                       "parent_id":2,
+                       "taxonomy_id":2
+                    },
+                    {
+                       "taxons":[
+              
+                       ],
+                       "id":7,
+                       "name":"Prism Hour",
+                       "pretty_name":"Brand -\u003e Prism Hour",
+                       "permalink":"brand/prism-hour",
+                       "parent_id":2,
+                       "taxonomy_id":2
+                    },
+                    {
+                       "taxons":[
+              
+                       ],
+                       "id":8,
+                       "name":"Smells like",
+                       "pretty_name":"Brand -\u003e Smells like",
+                       "permalink":"brand/smells-like",
+                       "parent_id":2,
+                       "taxonomy_id":2
+                    }
+                 ]
+              }
+    
+# Group Products
+
 # /api/products
 
 ### List All Products [GET]
