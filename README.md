@@ -1,5 +1,5 @@
 FORMAT: 1A
-HOST: https://dude.soukdesigner.com
+HOST: https://example.soukdesigner.com
 
 # Soukdesigner - API
 
