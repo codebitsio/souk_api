@@ -145,6 +145,84 @@ You may create your own Taxonomy using this action. It takes a JSON object conta
                  }
               }    
 
+# /api/taxonomies/{taxonomy_id}
+
+### Show a taxonomy [GET]
+
++ Request (application/json)
+
+    + Headers
+    
+            X-Souk-Token: <your-api-key-from-souk-admin-panel>
+            
++ Response 200 (application/json)
+
+    + Body
+
+            {
+              "id":1,
+              "name":"Categories",
+              "root":{
+                "id":1,
+                "name":"Categories",
+                "pretty_name":"Categories",
+                "permalink":"categories",
+                "parent_id":null,
+                "taxonomy_id":1,
+                "taxons":[
+                  {
+                    "id":3,
+                    "name":"Watches",
+                    "pretty_name":"Categories -\u003e Watches",
+                    "permalink":"categories/watches",
+                    "parent_id":1,
+                    "taxonomy_id":1
+                  },
+                  {
+                    "id":4,
+                    "name":"Toys",
+                    "pretty_name":"Categories -\u003e Toys",
+                    "permalink":"categories/toys",
+                    "parent_id":1,
+                    "taxonomy_id":1
+                  },
+                  {
+                    "id":5,
+                    "name":"Perfumes",
+                    "pretty_name":"Categories -\u003e Perfumes",
+                    "permalink":"categories/perfumes",
+                    "parent_id":1,
+                    "taxonomy_id":1
+                  }
+                ]
+              }
+            }
+
+### Update a Taxonomy [PUT]
+
+For instance, to update a taxonomy's name, make this request:
+
+PUT /api/taxonomies/1?taxonomy[name]=Pants
+
++ Request (application/json)
+
+            {
+               "product": {
+                  "description":"This is my updated product description",
+                  "price":"29.99",
+                  "display_price":"$29.99"
+               }
+            }
+
+    + Headers
+    
+            X-Souk-Token: <your-api-key-from-souk-admin-panel>
+            
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
 # Group Products
 
 # /api/products
