@@ -216,6 +216,92 @@ For instance, to update a taxonomy's name, make this request:
 
     + Body
 
+# /api/taxonomy/{taxonomy_id}/taxons
+
+### List All Taxons under a specific Taxonomy
+
++ Request (application/json)
+
+    + Headers
+    
+            X-Souk-Token: <your-api-key-from-souk-admin-panel>
+            
++ Response 200 (application/json)
+
+    + Body
+
+              {
+                 "count":3,
+                 "total_count":3,
+                 "current_page":1,
+                 "per_page":25,
+                 "pages":1,
+                 "taxons":[
+                    {
+                       "taxons":[
+
+                       ],
+                       "id":3,
+                       "name":"Watches",
+                       "pretty_name":"Categories -\u003e Watches",
+                       "permalink":"categories/watches",
+                       "parent_id":1,
+                       "taxonomy_id":1
+                    },
+                    {
+                       "taxons":[
+
+                       ],
+                       "id":4,
+                       "name":"Toys",
+                       "pretty_name":"Categories -\u003e Toys",
+                       "permalink":"categories/toys",
+                       "parent_id":1,
+                       "taxonomy_id":1
+                    },
+                    {
+                       "taxons":[
+
+                       ],
+                       "id":5,
+                       "name":"Perfumes",
+                       "pretty_name":"Categories -\u003e Perfumes",
+                       "permalink":"categories/perfumes",
+                       "parent_id":1,
+                       "taxonomy_id":1
+                    }
+                 ]
+              }
+
+### Create a new Taxon under a specific taxonomy
+
++ Request (application/json)
+
+        {
+          "name": "Sapatos Furados",
+          "permalink": "categories/sapatos-furados"
+        }
+
+    + Headers
+    
+            X-Souk-Token: <your-api-key-from-souk-admin-panel>
+
++ Response 201 (application/json)
+
+    + Body
+
+            {
+               "id":9,
+               "name":"Sapatos Furados",
+               "pretty_name":"Categories -\u003e Sapatos Furados",
+               "permalink":"categories/sapatos-furados",
+               "parent_id":1,
+               "taxonomy_id":1,
+               "taxons":[
+
+               ]
+            }
+
 # Group Products
 
 # /api/products
